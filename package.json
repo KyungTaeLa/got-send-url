@@ -1,0 +1,26 @@
+{
+  "name": "got-send-url",
+  "version": "1.0.0",
+  "description": "got-send-url is a GOT based HTTP request library for Node.js",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "npm publish"
+  },
+  "keywords": [
+    "got",
+    "sendurl",
+    "send-url",
+    "send.url",
+    "got-send-url"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "got": "^11.8.6",
+    "https-proxy-agent": "^7.0.4"
+  }
+}
