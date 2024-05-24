@@ -1,6 +1,6 @@
 {
   "name": "got-send-url",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "got-send-url is a GOT based HTTP request library for Node.js",
   "main": "./dist/index.js",
   "repository": {
