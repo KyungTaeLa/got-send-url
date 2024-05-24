@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "got-send-url is a GOT based HTTP request library for Node.js",
   "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyungTaeLa/got-send-url"
+  },
+  "homepage": "https://github.com/KyungTaeLa/got-send-url",
+  "author": {
+    "name": "KyungTae Na",
+    "email": "ktra0@naver.com"
+  },
   "scripts": {
     "build": "tsc",
     "deploy": "npm publish"
@@ -14,7 +23,6 @@
     "send.url",
     "got-send-url"
   ],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.4.5"
