@@ -70,15 +70,26 @@ const sendURL = async ({
 
     // 반환 객체
     let response;
-
-    // get 일 경우
-    if (method === "GET") {
-      options.searchParams = body;
-      response = await got(url, options);
+    if (headers["Content-Type"].includes("urlencoded")) {
+      // get 일 경우
+      if (method === "GET") {
+        options.searchParams = body;
+        response = await got(url, options);
+      } else {
+        // 이 외 모든 메서드
+        options.body = body;
+        response = await got(url, options);
+      }
     } else {
-      // 이 외 모든 메서드
-      options.json = body;
-      response = await got(url, options);
+      // get 일 경우
+      if (method === "GET") {
+        options.searchParams = body;
+        response = await got(url, options);
+      } else {
+        // 이 외 모든 메서드
+        options.json = body;
+        response = await got(url, options);
+      }
     }
 
     // tls 인증 여부 되돌리기
