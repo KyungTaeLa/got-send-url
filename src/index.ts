@@ -70,7 +70,7 @@ const sendURL = async ({
 
     // 반환 객체
     let response;
-    if (headers["Content-Type"].includes("urlencoded")) {
+    if (headers && headers["Content-Type"]?.includes("urlencoded")) {
       // get 일 경우
       if (method === "GET") {
         options.searchParams = body;
