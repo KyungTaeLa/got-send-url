@@ -16,6 +16,7 @@ const sendURL = async ({
   responseType = "json",
   useProxyYn = false,
   useThrowYn = true,
+  getAllResponseYn = false,
 }: IGotInput): Promise<any> => {
   try {
     // 프록시 사용이면서 https 인지 확인
@@ -97,8 +98,8 @@ const sendURL = async ({
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = "1";
     }
 
+    return getAllResponseYn ? response : response.body;
     // 응답 객체의 body만 반환
-    return response.body;
   } catch (error) {
     // throw 여부에 따라 throw 날려줌
     if (useThrowYn) {

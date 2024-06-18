@@ -44,4 +44,9 @@ export interface IGotInput {
    * @default true
    */
   useThrowYn?: boolean;
+  /**
+   * @alias 통신 간 예외 발생 시 throw 사용 여부
+   * @default false
+   */
+  getAllResponseYn?: boolean;
 }
